@@ -75,7 +75,7 @@ def add_pets_from_json(filename, cur, conn):
         age = int(i["age"])
         cuteness = int(i["cuteness"])
         aggressiveness = int(i["aggressiveness"])
-        #you have to fetch the numbers from species database cannot just insert hare
+        
         cur.execute("INSERT INTO Patients(pet_id, name, species_id, age, cuteness, aggressiveness) VALUES (?,?,?,?,?,?)", (pet_id, name, species, age, cuteness, aggressiveness))
         count += 1
         conn.commit()
@@ -86,7 +86,7 @@ def add_pets_from_json(filename, cur, conn):
 # TASK 3
 # CODE TO OUTPUT NON-AGGRESSIVE PETS
 def non_aggressive_pets(aggressiveness, cur, conn):
-
+    
     pass
 
 
